@@ -1,0 +1,14 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thank you</title><meta name="robots" content="noindex"><style>body{font-family:system-ui,sans-serif;background:#14213D;color:#fff;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;text-align:center}p{opacity:.85}</style>
+<script>
+(function(){
+var q=new URLSearchParams(location.search),sid=q.get('session_id')||'',test=q.get('nopixel')==='1';
+var dest='https://protected-downloads.uberlanpontonobre.workers.dev/thanks?session_id='+encodeURIComponent(sid);
+var go=function(){if(sid)location.replace(dest)};
+if(!test){
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2395535807917538');fbq('track','PageView');
+if(sid&&!sessionStorage.getItem('purchased_'+sid)){try{sessionStorage.setItem('purchased_'+sid,'1')}catch(e){}fbq('track','Purchase',{value:27,currency:'GBP'},{eventID:sid})}
+setTimeout(go,1500);
+}else{setTimeout(go,300)}
+})();
+</script></head><body><div><h1>Thank you!</h1><p>Taking you to your downloads…</p><noscript><p><a href="https://protected-downloads.uberlanpontonobre.workers.dev/thanks" style="color:#fff">Continue to your downloads</a></p></noscript></div></body></html>
